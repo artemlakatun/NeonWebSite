@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+
+header {
+    height: 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: aquamarine;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    background: aqua;
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 17px 0;
+    list-style-type: none;
+}
+
+.navMenu> li {
+    padding-left: 35px;
+}
+
+.link {
+    text-decoration: none;
+    color: deeppink;
+    font-size: 21px;
+    font-weight: 500;
+}
