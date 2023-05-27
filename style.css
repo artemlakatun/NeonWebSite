@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
 }
 
 /*header*/
@@ -10,13 +12,22 @@ header {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: aquamarine;
+
+    background: black;
+
+    border-bottom: 1px solid aqua;
 }
 
 .logo {
-    height: 50px;
-    width: 50px;
-    background: aqua;
+    margin: 4px;
+    height: 80%;
+    width: 300px;
+}
+
+.gif {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
 }
 
 .navMenu {
@@ -34,7 +45,189 @@ header {
 
 .link {
     text-decoration: none;
-    color: deeppink;
+    color: aqua;
     font-size: 21px;
     font-weight: 500;
+    position: relative;
+}
+
+.link:hover {
+    transition: 0.3s;
+    color: white;
+}
+
+.link:before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+}
+
+.link:hover:before {
+    transform: scaleX(1);
+    transition: 0.3s;
+}
+
+/*container*/
+
+.container {
+    width: 100%;
+    height: 200vh;
+    background: linear-gradient(54deg, rgba(5,5,5,0.9248074229691877) 0%, rgba(3,2,2,0.9220063025210083) 100%);
+    background-size: 180%;
+    animation: gradient 8s infinite linear;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 80% 0%;
+    }
+    50% {
+        background-position: 20% 100%;
+    }
+    100% {
+        background-position: 80% 0%;
+    }
+}
+
+/* welcome */
+
+.welcome {
+    width: 99.78%;
+    height: 93vh;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid aqua;
+}
+
+.about {
+    width: 60%;
+    margin-left: 20%;
+    padding: 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: aqua;
+
+    border: 3px solid aqua;
+    border-radius: 15px;
+    box-shadow: 0 0 15px aqua;
+}
+
+.about:hover {
+    text-shadow: -2px 4px 4px #091243, 0 0 10px #00d0ff;
+    border-radius: 15px;
+    background-color: transparent;
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.6),
+        2px 1px 4px rgba(0, 0, 0, 0.3),
+        2px 4px 3px rgba(3, 0, 128, 0.3),
+        0 0 7px 2px rgba(0, 208, 255, 0.6),
+        inset 0 1px 2px rgba(0, 0, 0, 0.6);
+    animation: flicker 5s infinite;
+}
+
+@keyframes flicker {
+    0% {
+        border-color: transparent;
+        opacity: 0.2;
+    }
+    5% {
+        border-color: #1fffff;
+        opacity: 1;
+    }
+    10% {
+        border-color: transparent;
+        opacity: 0.2;
+    }
+    15% {
+        border-color: #1fffff;
+        opacity: 1;
+    }
+    25% {
+        border-color: transparent;
+        opacity: 0.2;
+    }
+    45% {
+        border-color: #1fffff;
+        opacity: 1;
+    }
+    65% {
+        border-color: transparent;
+        opacity: 0.2;
+    }
+    75% {
+        border-color: #1fffff;
+        opacity: 1;
+    }
+    85% {
+        border-color: transparent;
+        opacity: 0.2;
+    }
+    100% {
+        border-color: #1fffff;
+        opacity: 1;
+    }
+}
+
+.about>h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.about>h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.welcome_image {
+    width: 100%;
+    height: 100%;
+}
+
+.club {
+    height: 110%;
+    width: 100%;
+    border-radius: 10px;
+
+}
+
+/* price */
+
+.price {
+    width: 100%;
+    height: 80vh;
+    border: 2px solid aqua;
+}
+
+.elements {
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.price>h3 {
+    font-size: 48px;
+    font-weight: 600;
+    color: aqua;
+    text-align: center;
+}
+
+.pk {
+    width: 40%;
+    height: 90%;
+    background-color: #00d0ff;
+}
+
+.console {
+    width: 40%;
+    height: 90%;
+    background-color: blue;
 }
