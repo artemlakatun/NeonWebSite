@@ -19,7 +19,7 @@ header {
 }
 
 .logo {
-    margin: 4px;
+    margin: 4px 0 0 10%;
     height: 80%;
     width: 300px;
 }
@@ -76,7 +76,7 @@ header {
 
 .container {
     width: 100%;
-    height: 200vh;
+    height: 300vh;
     background: linear-gradient(54deg, rgba(5,5,5,0.9248074229691877) 0%, rgba(3,2,2,0.9220063025210083) 100%);
     background-size: 180%;
     animation: gradient 8s infinite linear;
@@ -104,6 +104,7 @@ header {
     justify-content: center;
     align-items: center;
     border: 2px solid aqua;
+    box-shadow: 0 0 15px aqua;
 }
 
 .about {
@@ -183,6 +184,7 @@ header {
 .about>h2 {
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 .welcome_image {
@@ -200,14 +202,16 @@ header {
 /* price */
 
 .price {
-    width: 100%;
+    width: 99.8%;
     height: 80vh;
     border: 2px solid aqua;
+    box-shadow: 0 0 15px aqua;
+    color: white;
 }
 
 .elements {
     width: 100%;
-    height: 55vh;
+    height: 58vh;
     display: flex;
     justify-content: space-around;
     padding-top: 30px;
@@ -220,14 +224,147 @@ header {
     text-align: center;
 }
 
-.pk {
-    width: 40%;
-    height: 90%;
-    background-color: #00d0ff;
+.pc {
+    width: 44%;
+    height: 89%;
+    border: 3px solid aqua;
+    border-radius: 15px;
+    box-shadow: 0 0 15px aqua;
+}
+
+.pcHead {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.cashInfo {
+    width: 25%;
+    height: 95%;
+    margin: 20px 5px;
+    box-shadow: 0 0 10px aqua;
+}
+
+.cashInfo>h3 {
+    margin: 5px 0 0 0;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 600;
+
+    animation-name: glowing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.cashInfo>p {
+    margin: 5px 0 0 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.pc_container {
+    width: 99%;
+    height: 79.5%;
+    display: flex;
+    flex-direction: row;
+    margin-top: -20px;
 }
 
 .console {
-    width: 40%;
-    height: 90%;
-    background-color: blue;
+    width: 44%;
+    height: 89%;
+    border: 3px solid aqua;
+    border-radius: 15px;
+    box-shadow: 0 0 15px aqua;
+}
+
+.cash {
+    width: 25%;
+    height: 75%;
+    margin: 75px 5px;
+    border: 3px solid aqua;
+    border-radius: 15px;
+    box-shadow: 0 0 6px aqua;
+}
+
+.cash>h4 {
+    margin: 5px 0 0 0;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 600;
+    opacity: 0.2;
+    animation-name: glowing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glowing {
+    0%, 100% {
+        opacity: 0.8;
+        filter: blur(0.5);
+        text-shadow: 0 0 5px #00008b,
+        0 0 5px #00d0ff,
+        0 0 10px #00d0ff,
+        0 0 15px #00d0ff,
+        0 0 20px #00d0ff,
+        0 0 25px #00d0ff;
+    }
+    30%, 70% {
+        opacity: 0.2;
+        filter: blur(0);
+        text-shadow: none;
+    }
+}
+
+.cash>ul {
+    margin: 0;
+    padding-left: 12%;
+}
+
+.cash>ul>li {
+    margin: 5px 0 0 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.conHead {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.con_container {
+    width: 99%;
+    height: 79.5%;
+    display: flex;
+    flex-direction: row;
+    margin-top: -20px;
+}
+
+/* kitchen */
+
+.kitchen {
+    width: 99.8%;
+    height: 85vh;
+    border: 2px solid aqua;
+    box-shadow: 0 0 15px aqua;
+}
+
+.kitchen>h3 {
+    font-size: 48px;
+    font-weight: 600;
+    color: aqua;
+    text-align: center;
+}
+
+.kitchenMenu {
+    width: 80%;
+    min-height: 65vh;
+    border: 2px solid aqua;
+    box-shadow: 0 0 15px aqua;
+    margin-left: auto;
+    margin-right: auto;
 }
