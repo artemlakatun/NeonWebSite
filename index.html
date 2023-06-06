@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVq-p4qUwdwQq_A8grQk-Pe7AYagFJqQc&callback=initMap" async defer></script>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
@@ -232,22 +234,62 @@
                </div>
            </div>
        </div>
-        <div class="aboutClub">
-            <h3>About our club</h3>
-            <div class="sim-slider">
-                <ul class="sim-slider-list">
-                    <li><img src="image/club.png" alt="screen"></li>    <!-- это экран -->
-                    <li class="sim-slider-element"><img src="image/menu1.jpg" alt="1"></li>
-                    <li class="sim-slider-element"><img src="image/menu.jpg" alt="2"></li>
-                    <li class="sim-slider-element"><img src="image/samur.png" alt="N"></li>
-                </ul>
-                <div class="sim-slider-arrow-left"></div>
-                <div class="sim-slider-arrow-right"></div>
-                <div class="sim-slider-dots"></div>
+        <div class="aboutUs">
+            <div class="aboutHeader">
+                <h3>About Us</h3>
+                <p>We will be glad to see you in our club! You can relax with us both alone and in your company! With us you will
+                    be distracted from everyday duties and problems! You can have a tasty snack and continue to enjoy your favorite games!<br>
+                    If you are tired of playing on the computer, you can go with your company to a table and play board games! Yes, we have everything!
+                </p>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="slide active">
+                        <img src="image/club2.png" alt="Slide 1">
+                    </div>
+                    <div class="slide">
+                        <img src="image/club.png" alt="Slide 2">
+                    </div>
+                    <div class="slide">
+                        <img src="image/club3.png" alt="Slide 3">
+                    </div>
+                </div>
+                <div class="carousel-indicators"></div>
+                <button class="carousel-prev-button">&lt;</button>
+                <button class="carousel-next-button">&gt;</button>
+            </div>
+            <div class="aboutText">
+                <p>You can choose your city and check where our club is located!</p>
+            </div>
+            <div class="containerCity">
+                <div class="city-dropdown">
+                    <button class="city-dropdown-btn">Выберите город</button>
+                    <div class="city-dropdown-content">
+                        <ul class="city-list">
+                            <li class="city-item item1">Москва</li>
+                            <li class="city-item">Санкт-Петербург</li>
+                            <li class="city-item item3">Минск</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="map"></div>
             </div>
         </div>
+        <footer class="footer">
+            <div class="footerElements">
+                <span><i class='bx bxl-creative-commons'></i>Cyber Arena</span>
+            </div>
+            <div class="footerElements">
+                <span>2023</span>
+            </div>
+            <div class="footerElements">
+                <span>+375 (44) 751-75-11</span>
+                <a class="elem" href="https://t.me/artem_lakatun"><i class='bx bxl-telegram'></i></a>
+                <a class="elem" href="https://github.com/artemlakatun"><i class='bx bxl-github'></i></a>
+                <a class="elem"href="https://www.instagram.com/artem_lakatun/"><i class='bx bxl-instagram' ></i></a>
+            </div>
+        </footer>
     </div>
-    <script src="sim-slider.js"></script>
-    <script>new Sim()</script>
+    <script src="file.js"></script>
 </body>
 </html>
