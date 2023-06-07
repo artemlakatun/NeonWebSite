@@ -60,19 +60,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    var cityDropdownBtn = document.querySelector(".city-dropdown-btn");
-    var cityDropdownContent = document.querySelector(".city-dropdown-content");
-    var cityList = document.querySelector(".city-list");
-    var mapContainer = document.querySelector("#map");
-    var map = null;
-    var markers = []; // Массив для хранения маркеров
+    let cityDropdownBtn = document.querySelector(".city-dropdown-btn");
+    let cityDropdownContent = document.querySelector(".city-dropdown-content");
+    let cityList = document.querySelector(".city-list");
+    let mapContainer = document.querySelector("#map");
+    let map = null;
+    let markers = []; // Массив для хранения маркеров
 
     cityDropdownBtn.addEventListener("click", function() {
         cityDropdownContent.classList.toggle("show");
     });
 
     cityList.addEventListener("click", function(e) {
-        var selectedCity = e.target.textContent;
+        let selectedCity = e.target.textContent;
         cityDropdownBtn.textContent = selectedCity + " " + String.fromCharCode(9660);
         cityDropdownContent.classList.remove("show");
 
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             // Добавить маркер на карту Москвы
-            var marker = new google.maps.Marker({
+            let marker = new google.maps.Marker({
                 position: { lat: 55.7558, lng: 37.6176 },
                 map: map,
                 title: "Москва"
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             // Добавить маркер на карту Санкт-Петербурга
-            var marker = new google.maps.Marker({
+            let marker = new google.maps.Marker({
                 position: { lat: 59.9343, lng: 30.3351 },
                 map: map,
                 title: "Санкт-Петербург"
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             // Добавить маркер на карту Минска
-            var marker = new google.maps.Marker({
+            let marker = new google.maps.Marker({
                 position: { lat: 53.9045, lng: 27.5615 },
                 map: map,
                 title: "Минск"
