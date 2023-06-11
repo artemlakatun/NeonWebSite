@@ -184,4 +184,3 @@ document.addEventListener("DOMContentLoaded", function() {
         cityDropdownContent.style.display = "none";
     });
 });
-
