@@ -184,3 +184,19 @@ document.addEventListener("DOMContentLoaded", function() {
         cityDropdownContent.style.display = "none";
     });
 });
+
+//burger menu
+
+
+document.querySelector('.burger').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerIcon = document.querySelector(".burger");
+    const navMenu = document.querySelector(".navMenu");
+
+    burgerIcon.addEventListener("click", function () {
+        burgerIcon.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    });
+});

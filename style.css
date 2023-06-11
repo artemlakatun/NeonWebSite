@@ -31,6 +31,18 @@ body {
         border-radius: 10px;
     }
 
+    .burger {
+        display: none; /* Изначально скрываем бургер-меню */
+    }
+
+    .burger span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: aqua;
+        transition: all 0.3s ease;
+    }
+
     .navMenu {
         display: flex;
         flex-direction: row;
@@ -73,37 +85,17 @@ body {
         transition: 0.3s;
     }
 
-    /*container*/
-    .container {
-        width: 100%;
-        height: 456vh;
-        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
-        background-size: 180%;
-        animation: gradient 8s infinite linear;
-    }
-
-    @keyframes gradient {
-        0% {
-            background-position: 80% 0%;
-        }
-        50% {
-            background-position: 20% 100%;
-        }
-        100% {
-            background-position: 80% 0%;
-        }
-    }
-
     /* welcome */
     .welcome {
         width: 99.78%;
-        height: 93vh;
+        height: 1012px;
         display: grid;
         grid-template-columns: 1.5fr 1fr;
         justify-content: center;
         align-items: center;
         border: 2px solid aqua;
         box-shadow: 0 0 15px aqua;
+        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
     }
 
     .about {
@@ -200,10 +192,11 @@ body {
     /* price */
     .price {
         width: 99.8%;
-        height: 80vh;
+        height: 800px;
         border: 2px solid aqua;
         box-shadow: 0 0 15px aqua;
         color: white;
+        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
     }
 
     .elements {
@@ -343,9 +336,10 @@ body {
     /* kitchen */
     .barMenu {
         width: 99.8%;
-        height: 110vh;
+        height: 1100px;
         border: 2px solid aqua;
         box-shadow: 0 0 15px aqua;
+        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
     }
 
     .barMenu > h3 {
@@ -412,10 +406,11 @@ body {
     /* club */
     .aboutUs {
         width: 99.8%;
-        height: 165vh;
+        height: 1600px;
         border: 2px solid aqua;
         box-shadow: 0 0 15px aqua;
         border-radius: 0;
+        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
     }
 
     .aboutHeader {
@@ -606,6 +601,7 @@ body {
         box-shadow: 0 0 15px aqua;
         display: flex;
         justify-content: space-around;
+        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
     }
 
     .footerElements {
@@ -626,10 +622,12 @@ body {
 /* media queries*/
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    /*header*/
+
+    /* header */
+
     header {
         height: 60px;
-        width: 99.8%;
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
 
@@ -650,8 +648,14 @@ body {
         border-radius: 10px;
     }
 
-    .navMenu {
+    .navbar {
         display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .navMenu {
+        display: none;
         flex-direction: row;
         justify-content: center;
         margin: 0;
@@ -659,14 +663,14 @@ body {
         list-style-type: none;
     }
 
-    .navMenu> li {
-        padding-left: 35px;
+    .navMenu > li {
+        padding-right: 22px;
     }
 
     .link {
         text-decoration: none;
         color: aqua;
-        font-size: 21px;
+        font-size: 32px;
         font-weight: 500;
         position: relative;
     }
@@ -692,37 +696,90 @@ body {
         transition: 0.3s;
     }
 
-    /*container*/
-    .container {
-        width: 100%;
-        height: 455.5vh;
-        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
-        background-size: 180%;
-        animation: gradient 8s infinite linear;
+    .burger {
+        display: flex;
+        position: relative;
+        width: 45px;
+        height: 25px;
+        justify-content: flex-end;
+        align-items: center;
+        z-index: 2;
     }
 
-    @keyframes gradient {
-        0% {
-            background-position: 80% 0%;
-        }
-        50% {
-            background-position: 20% 100%;
-        }
-        100% {
-            background-position: 80% 0%;
-        }
+    .burger span {
+        transform: scale(1);
+        height: 2px;
+        width: 80%;
+        background: aqua;
+    }
+
+    .burger::before, .burger:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: aqua;
+        transition: all 0.3s ease 0s;
+    }
+
+    .burger::before {
+        top: 0;
+    }
+
+    .burger::after {
+        bottom: 0;
+    }
+
+    .burger.active span {
+        transform: scale(0);
+    }
+
+    .burger.active::before {
+        top:50%;
+        transform: rotate(-45deg) translate(0, -50%);
+    }
+
+    .burger.active::after {
+        bottom:50%;
+        transform: rotate(45deg) translate(0, 50%);
+    }
+
+    .navbar.active .navMenu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: black;
+        padding: 20px;
+        animation: burgerAnimation 0.6s;
+    }
+
+    .navbar.active .navMenu > li {
+        padding: 15px 0;
+    }
+
+    @keyframes burgerAnimation {
+        from{opacity: 0}
+        to{opacity: 1}
     }
 
     /* welcome */
     .welcome {
         width: 99.78%;
-        height: 93vh;
+        height: 1012px;
         display: grid;
         grid-template-columns: 1.5fr 1fr;
         justify-content: center;
         align-items: center;
         border: 2px solid aqua;
         box-shadow: 0 0 15px aqua;
+        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
+
     }
 
     .about {
@@ -805,8 +862,8 @@ body {
     }
 
     .welcome_image {
-        width: 100%;
-        height: 100%;
+        width: 550px;
+        height: 350px;
     }
 
     .club {
@@ -819,10 +876,11 @@ body {
     /* price */
     .price {
         width: 99.8%;
-        height: 80vh;
+        height: 800px;
         border: 2px solid aqua;
         box-shadow: 0 0 15px aqua;
         color: white;
+        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
     }
 
     .elements {
@@ -962,9 +1020,10 @@ body {
     /* kitchen */
     .barMenu {
         width: 99.8%;
-        height: 110vh;
+        height: 1100px;
         border: 2px solid aqua;
         box-shadow: 0 0 15px aqua;
+        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
     }
 
     .barMenu > h3 {
@@ -1031,10 +1090,11 @@ body {
     /* club */
     .aboutUs {
         width: 99.8%;
-        height: 150vh;
+        height: 1600px;
         border: 2px solid aqua;
         box-shadow: 0 0 15px aqua;
         border-radius: 0;
+        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
     }
 
     .aboutHeader {
@@ -1225,6 +1285,7 @@ body {
         box-shadow: 0 0 15px aqua;
         display: flex;
         justify-content: space-around;
+        background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
     }
 
     .footerElements {
