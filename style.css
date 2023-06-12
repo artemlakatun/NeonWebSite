@@ -772,7 +772,7 @@ body {
     /* welcome */
     .welcome {
         width: 99.78%;
-        height: 1012px;
+        height: 940px;
         display: grid;
         grid-template-columns: 1.5fr 1fr;
         justify-content: center;
