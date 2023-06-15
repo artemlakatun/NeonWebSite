@@ -242,14 +242,168 @@ body {
 
 .contacts {
     width: 100%;
+    height: 500px;
+    background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
+    border: 2px solid aqua;
+    box-shadow: 0 0 15px aqua;
+}
+
+.contactsHeader {
+    width: 100%;
+    height: 60px;
+}
+
+.contactsHeader>h3 {
+    font-size: 28px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+}
+
+.contactsContainer {
+    width: 70%;
+    height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+    border: 3px solid aqua;
+    border-radius: 15px;
+    box-shadow: 0 0 15px aqua;
+}
+
+.telephone {
+    width: 30%;
+    height: 250px;
+    border: 3px solid aqua;
+    border-radius: 15px;
+    box-shadow: 0 0 15px aqua;
+    padding: 5px 20px;
+}
+
+.social {
+    width: 30%;
+    height: 250px;
+    border: 2px solid aqua;
+    border-radius: 15px;
+    box-shadow: 0 0 15px aqua;
+    padding: 5px 20px;
+}
+
+.socialLink {
+    text-decoration: none;
+    color: aqua;
+}
+
+.socialLink:hover {
+    color: white;
+    transition: 0.3s;
+}
+
+/* prize */
+
+.prize {
+    width: 100%;
     height: 600px;
     background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
     border: 2px solid aqua;
     box-shadow: 0 0 15px aqua;
 }
 
-.contacts>h3 {
-    font-size: 28px;
-    font-weight: 400;
+.first {
+    position: relative;
+    width: 70%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid aqua;
+    border-radius: 15px;
+    box-shadow: 0 0 15px aqua;
+    top: 20px;
+}
+
+.first>h4 {
+    margin: 0;
     text-align: center;
+    font-size: 50px;
+    animation-name: glowing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.first>p {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+    animation-name: glowing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.second {
+    width: 70%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid aqua;
+    border-radius: 15px;
+    box-shadow: 0 0 15px aqua;
+    margin-top: 60px;
+}
+
+.second>h4 {
+    margin: 0;
+    text-align: center;
+    font-size: 40px;
+}
+
+.second>p {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.third {
+    width: 70%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid aqua;
+    border-radius: 15px;
+    box-shadow: 0 0 15px aqua;
+    margin-top: 60px;
+}
+
+.third>h4 {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.third>p {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+@keyframes glowing {
+    0%, 100% {
+        opacity: 0.8;
+        filter: blur(0.2);
+        text-shadow: 0 0 5px #00008b,
+        0 0 5px #00d0ff,
+        0 0 10px #00d0ff,
+        0 0 15px #00d0ff,
+        0 0 20px #00d0ff,
+        0 0 25px #00d0ff;
+    }
+    30%, 70% {
+        opacity: 0.2;
+        filter: blur(0);
+        text-shadow: none;
+    }
 }
