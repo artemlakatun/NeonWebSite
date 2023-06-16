@@ -907,7 +907,7 @@ body {
     .text1 {
         position: relative;
         width: 30%;
-        height: 60%;
+        height: 61%;
         top: 20%;
         margin-left: 5%;
         border: 2px solid aqua;
@@ -924,7 +924,7 @@ body {
     .picture1 {
         position: relative;
         width: 55%;
-        height: 60%;
+        height: 61%;
         top: 20%;
         margin-right: 2%;
         border: 2px solid aqua;
@@ -946,7 +946,7 @@ body {
     .text2 {
         position: relative;
         width: 30%;
-        height: 60%;
+        height: 61%;
         top: 20%;
         margin-right: 5%;
         border: 2px solid aqua;
@@ -968,7 +968,7 @@ body {
     .picture2 {
         position: relative;
         width: 55%;
-        height: 60%;
+        height: 61%;
         top: 20%;
         margin-left: 2%;
         border: 2px solid aqua;
@@ -988,7 +988,7 @@ body {
     .text3 {
         position: relative;
         width: 30%;
-        height: 60%;
+        height: 61%;
         top: 20%;
         margin-left: 5%;
         border: 2px solid aqua;
@@ -1010,7 +1010,7 @@ body {
     .picture3 {
         position: relative;
         width: 55%;
-        height: 60%;
+        height: 61%;
         top: 20%;
         margin-right: 2%;
         border: 2px solid aqua;
@@ -1093,7 +1093,7 @@ body {
 
     .rules {
         width: 100%;
-        height: 1900px;
+        height: 2000px;
         background: linear-gradient(54deg, rgba(5, 5, 5, 0.9248074229691877) 0%, rgba(3, 2, 2, 0.9220063025210083) 100%);
         border: 2px solid aqua;
         box-shadow: 0 0 15px aqua;
@@ -1108,7 +1108,7 @@ body {
 
     .rulesText {
         width: 80%;
-        height: 1790px;
+        height: 1890px;
         margin-right: auto;
         margin-left: auto;
         border: 3px solid aqua;
