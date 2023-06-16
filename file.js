@@ -201,6 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
 //плавный якорь навигации
 const anchors = document.querySelectorAll('a[href*="#"]')
 
