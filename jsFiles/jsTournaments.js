@@ -67,3 +67,17 @@ for (let i = 1; i < points.length - 1; i++) {
 }
 ctx.lineTo(points[points.length - 1].x, points[points.length - 1].y);
 ctx.stroke();
+
+//плавный якорь навигации
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for(let anchor of anchors) {
+    anchor.addEventListener("click", function (e) {
+        event.preventDefault();
+        const blockID = anchor.getAttribute('href')
+        document.querySelector('' + blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    })
+}
